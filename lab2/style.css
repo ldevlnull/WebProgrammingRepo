@@ -18,8 +18,6 @@ header {
 .container > div > a > img:hover {
     transition: all 1.3s ease;
     filter: grayscale(0%) blur(0px);
-
-
 }
 
 img {
