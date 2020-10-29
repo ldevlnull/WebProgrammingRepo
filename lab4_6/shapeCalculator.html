@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Shape Calculator</title>
+</head>
+<body>
+<div id="scroll-animate">
+    <div id="scroll-animate-main">
+        <div class="wrapper-parallax">
+            <header>
+                <h1>Header</h1>
+            </header>
+            <section class="content">
+                <nav>
+                    <ul>
+                        <li><a href="index.html#content">Home page</a>
+                        <li><a href="shapeCalculator.html#content">Shape Calculator</a></li>
+                        <li><a href="exam.html#content">Exam</a></li>
+                    </ul>
+                </nav>
+                <div class="content calculator" id="content">
+                    <div id="page">
+                        <h2>Shape Calculator</h2>
+                        <label>Select type of shape:</label>
+                        <fieldset>
+                            <input type="radio" name="shape" value="triangle" id="triangle" checked>
+                            <label for="triangle">Triangle</label>
+                            <br>
+                            <input type="radio" name="shape" value="square" id="square">
+                            <label for="square">Square</label>
+                            <br>
+                            <input type="radio" name="shape" value="circle" id="circle">
+                            <label for="circle">Circle</label>
+                            <br>
+                            <input type="radio" name="shape" value="circleLength" id="circleLength">
+                            <label for="circleLength">Circle (length)</label>
+                            <br>
+                            <input type="radio" name="shape" value="sphereVolume" id="sphere">
+                            <label for="sphere">Sphere (volume)</label>
+                        </fieldset>
+                        <fieldset>
+                            <p id="errorText" hidden style="background-color: red; color: white"></p>
+                            <label for="val" id="val-label">Edge:</label>
+                            <input type="text" name="val" id="val">
+                            <label for="res">Area:</label>
+                            <input type="text" name="res" id="res" readonly>
+                        </fieldset>
+                        <input type="button" id="calculateButton" value="Calculate">
+                    </div>
+                </div>
+            </section>
+            <footer>
+                <h2>Made by Oleksii Ulianov, student of FeI-32</h2>
+            </footer>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="js/style-script.js"></script>
+<script type="text/javascript" src="js/shapeCalculator.js"></script>
+</body>
+</html>

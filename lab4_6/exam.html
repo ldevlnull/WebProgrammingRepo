@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Exam</title>
+</head>
+<body>
+<div id="scroll-animate">
+    <div id="scroll-animate-main">
+        <div class="wrapper-parallax">
+            <header>
+                <h1>Header</h1>
+            </header>
+            <section class="content">
+                <nav>
+                    <ul>
+                        <li><a href="index.html#content">Home page</a>
+                        <li><a href="shapeCalculator.html#content">Shape Calculator</a>
+                        <li><a href="exam.html#content">Exam</a></li>
+                    </ul>
+                </nav>
+                <div class="content exam" id="content">
+                    <div id="page" class="row">
+                        <h2>Exam</h2>
+                        <div class="column">
+                            <fieldset class='q'>
+                                <h3>Question 1</h3>
+                                <p>2 + 2 =</p>
+                                <input type="radio" name="q1" value="a">
+                                <label>A) 2</label>
+                                <br>
+                                <input type="radio" name="q1" value="b">
+                                <label>B) 3</label>
+                                <br>
+                                <input type="radio" name="q1" value="c">
+                                <label>C) 4</label>
+                                <br>
+                            </fieldset>
+                            <fieldset class='q'>
+                                <h3>Question 2</h3>
+                                <p>8 - 5 =</p>
+                                <input type="radio" name="q2" value="a">
+                                <label>A) 2</label>
+                                <br>
+                                <input type="radio" name="q2" value="b">
+                                <label>B) 3</label>
+                                <br>
+                                <input type="radio" name="q2" value="c">
+                                <label>C) 4</label>
+                                <br>
+                            </fieldset>
+                            <fieldset class='q'>
+                                <h3>Question 3</h3>
+                                <p>2 * 4 =</p>
+                                <input type="radio" name="q3" value="a">
+                                <label>A) 5</label>
+                                <br>
+                                <input type="radio" name="q3" value="b">
+                                <label>B) 7</label>
+                                <br>
+                                <input type="radio" name="q3" value="c">
+                                <label>C) 8</label>
+                                <br>
+                            </fieldset>
+                            <fieldset class='q'>
+                                <h3>Question 4</h3>
+                                <p>12 / 3 =</p>
+                                <input type="radio" name="q4" value="a">
+                                <label>A) 3</label>
+                                <br>
+                                <input type="radio" name="q4" value="b">
+                                <label>B) 4</label>
+                                <br>
+                                <input type="radio" name="q4" value="c">
+                                <label>C) 6</label>
+                                <br>
+                            </fieldset>
+                            <fieldset class='q'>
+                                <h3>Question 5</h3>
+                                <p>2^4 =</p>
+                                <input type="radio" name="q5" value="a">
+                                <label>A) 1</label>
+                                <br>
+                                <input type="radio" name="q5" value="b">
+                                <label>B) 4</label>
+                                <br>
+                                <input type="radio" name="q5" value="c">
+                                <label>C) 16</label>
+                                <br>
+                            </fieldset>
+                            <p hidden id="errorText" style="background-color: red; color: white"></p>
+                            <p hidden id="correctAnswers" style="color: white;"></p>
+                        </div>
+                        <div class="column">
+                            <fieldset class='q'>
+                                <h3>Question 6</h3>
+                                <p>sqrt(121) =</p>
+                                <input type="radio" name="q6" value="a">
+                                <label>A) 9</label>
+                                <br>
+                                <input type="radio" name="q6" value="b">
+                                <label>B) 11</label>
+                                <br>
+                                <input type="radio" name="q6" value="c">
+                                <label>C) 12</label>
+                                <br>
+                            </fieldset>
+                            <fieldset class='q'>
+                                <h3>Question 7</h3>
+                                <p>0! =</p>
+                                <input type="radio" name="q7" value="a">
+                                <label>A) 0</label>
+                                <br>
+                                <input type="radio" name="q7" value="b">
+                                <label>B) 1</label>
+                                <br>
+                                <input type="radio" name="q7" value="c">
+                                <label>C) NaN</label>
+                                <br>
+                            </fieldset>
+                            <fieldset class='q'>
+                                <h3>Question 8</h3>
+                                <p>1! =</p>
+                                <input type="radio" name="q8" value="a">
+                                <label>A) 0</label>
+                                <br>
+                                <input type="radio" name="q8" value="b">
+                                <label>B) 1</label>
+                                <br>
+                                <input type="radio" name="q8" value="c">
+                                <label>C) NaN</label>
+                                <br>
+                            </fieldset>
+                            <fieldset class='q'>
+                                <h3>Question 9</h3>
+                                <p>3! =</p>
+                                <input type="radio" name="q9" value="a">
+                                <label>A) 0</label>
+                                <br>
+                                <input type="radio" name="q9" value="b">
+                                <label>B) 1</label>
+                                <br>
+                                <input type="radio" name="q9" value="c">
+                                <label>C) 6</label>
+                                <br>
+                            </fieldset>
+                            <fieldset class='q'>
+                                <h3>Question 10</h3>
+                                <p>100! / 98! =</p>
+                                <input type="radio" name="q10" value="a">
+                                <label>A) 1421421</label>
+                                <br>
+                                <input type="radio" name="q10" value="b">
+                                <label>B) 9900</label>
+                                <br>
+                                <input type="radio" name="q10" value="c">
+                                <label>C) 2234</label>
+                                <br>
+                            </fieldset>
+                            <button id="finishButton">Finish</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <footer>
+                <h2>Made by Oleksii Ulianov, student of FeI-32</h2>
+            </footer>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="js/style-script.js"></script>
+<script type="text/javascript" src="js/examScript.js"></script>
+</body>
+</html>
