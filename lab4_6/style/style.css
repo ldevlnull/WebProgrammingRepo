@@ -99,11 +99,16 @@ header {
 
 footer {
     width: 100%;
-    height: 300px;
+    height: 450px;
     background: gray;
-    bottom: -300px;
+    bottom: -2000px;
     position: fixed;
     z-index: -1;
+}
+
+footer h2 {
+    line-height: 100px;
+    padding-top: 320px;
 }
 
 .content {
@@ -114,6 +119,7 @@ footer {
     z-index: 1;
     flex: content-box;
 }
+
 .content.home {
     text-align: center;
 }
@@ -153,11 +159,6 @@ h2 {
 
 .content.calculator fieldset {
     margin: 20px;
-}
-
-footer h2 {
-    line-height: 100px;
-    padding-top: 200px;
 }
 
 header,
@@ -202,4 +203,115 @@ button {
     margin-left: 20px;
     height: 40px;
     width: 140px;
+}
+
+#dynamic-menu {
+    background-color: #CCCCCC;
+    padding: 20px 0;
+    display: flex;
+}
+
+.element {
+    padding: 10px 5%;
+    /*border: 1px solid black;*/
+    cursor: default;
+    position: relative;
+    margin: 10px;
+    text-align: center;
+}
+
+.level-first {
+    width: 60%;
+}
+
+.level-second {
+    width: 50%;
+    height: 10px;
+    padding: 10%;
+    left: -20%;
+}
+
+.level-third {
+    left: 120%;
+    width: 100%;
+    top: -500%;
+    margin: 0;
+    padding: 10%;
+    background-color: #CCCCAC;
+}
+
+.level-first:hover {
+    background-color: #DDDDDD;
+}
+
+.level-second:hover {
+    background-color: #CCCCCC;
+}
+
+.level-third:hover {
+    background-color: #BBBBBB;
+}
+
+/* Disables hyper-links style */
+a {
+    color: black;
+    text-decoration: none; /* no underline */
+}
+
+#calculator {
+    padding: 0;
+    margin: 1px;
+    margin-top: 5%;
+}
+
+#calculator>.row {
+    width: 30%;
+    padding-left: 25%;
+    padding-right: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+#calculator>.row>.column {
+    height: 60px;
+    border: 1px solid #282828;
+    text-align: center;
+    padding-top: 5%;
+    background-color: black;
+    color: white;
+    font-size: 32px;
+    cursor: default;
+}
+
+#calculator>.row>.column:hover {
+    background-color: #4a4a4a;
+}
+
+#calculator>.row>.column:active {
+    background-color: #858585;
+}
+
+#calculator>.row>#calculateNumbersButton {
+    background-color: #124b92;
+}
+
+#calculator>.row>#calculateNumbersButton:hover {
+    background-color: #276aba;
+}
+
+#calculator>.row>#calculateNumbersButton:active {
+    background-color: #3978b8;
+}
+
+#calculator>.row>.operator {
+    background-color: #1a1a1a;
+}
+
+#result {
+    font-size: 52px;
+    float: none;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin: 10px;
 }
