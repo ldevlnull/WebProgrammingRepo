@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>Gallery</title>
     <link rel="stylesheet" href="style/style.css">
-    <title>Home</title>
 </head>
 <body>
 <div id="scroll-animate">
@@ -13,7 +13,7 @@
                 <h1>Header</h1>
             </header>
             <div id="dynamic-menu"></div>
-            <section class="content home">
+            <section class="content home" style="height: 1200px">
                 <nav>
                     <ul>
                         <li><a href="index.html#content">Home page</a>
@@ -22,12 +22,18 @@
                         <li><a href="numberCalculator.html#content">Number Calculator</a></li>
                         <li><a href="registration.html#content">Register</a></li>
                         <li><a href="jqueryPreview.html#content">jQuery Preview</a></li>
+                        <li><a href="gallery.html#content">Gallery</a></li>
                     </ul>
                 </nav>
                 <div class="content" id="content">
                     <div id="page">
-                        <h2>Home page</h2>
-                        <p>Just blank page with references to another pages</p>
+                        <h2>Gallery</h2>
+                        <div id="main-picture"></div>
+                        <div id="picture-control">
+                            <span id="prev-pic-button"><</span>
+                            <span id="next-pic-button">></span>
+                        </div>
+                        <div id="list-pictures"></div>
                     </div>
                 </div>
             </section>
@@ -39,5 +45,6 @@
 </div>
 <script type="text/javascript" src="js/style-script.js"></script>
 <script type="module" src="js/dynamicMenu.mjs"></script>
+<script type="text/javascript" src="js/galleryScript.js"></script>
 </body>
 </html>

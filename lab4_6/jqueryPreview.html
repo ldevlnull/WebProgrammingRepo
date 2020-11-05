@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>jQuery Preview</title>
     <link rel="stylesheet" href="style/style.css">
-    <title>Home</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
 <div id="scroll-animate">
@@ -22,13 +23,22 @@
                         <li><a href="numberCalculator.html#content">Number Calculator</a></li>
                         <li><a href="registration.html#content">Register</a></li>
                         <li><a href="jqueryPreview.html#content">jQuery Preview</a></li>
+                        <li><a href="gallery.html#content">Gallery</a></li>
                     </ul>
                 </nav>
                 <div class="content" id="content">
-                    <div id="page">
-                        <h2>Home page</h2>
-                        <p>Just blank page with references to another pages</p>
-                    </div>
+                    <button id="btn-toggle-text">Toggle</button>
+                    <button id="btn-bold-text">Bold</button>
+                    <button id="btn-color-text">Colour</button>
+
+                    <p id="sample-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+
+                    <div id="sample-block"></div>
                 </div>
             </section>
             <footer>
@@ -39,5 +49,6 @@
 </div>
 <script type="text/javascript" src="js/style-script.js"></script>
 <script type="module" src="js/dynamicMenu.mjs"></script>
+<script type="text/javascript" src="js/jQueryPreview.js"></script>
 </body>
 </html>

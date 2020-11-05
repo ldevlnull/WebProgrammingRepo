@@ -2,7 +2,6 @@ import {CONTEXT_MENU} from "./hardcodedMenu.mjs";
 
 const PARENT = document.querySelector('#dynamic-menu');
 
-
 function createElement(el, level) {
     const element = document.createElement('div');
     element.innerHTML = '<a href="' + el.ref + '">' + '<span>' + el.name + '</span>' + '</a>';

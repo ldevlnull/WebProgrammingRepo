@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/registration.css">
+</head>
+<body>
+<div id="scroll-animate">
+    <div id="scroll-animate-main">
+        <div class="wrapper-parallax">
+            <header>
+                <h1>Header</h1>
+            </header>
+            <div id="dynamic-menu"></div>
+            <section class="content" style="height: 2000px;">
+                <nav>
+                    <ul>
+                        <li><a href="index.html#content">Home page</a>
+                        <li><a href="shapeCalculator.html#content">Shape Calculator</a></li>
+                        <li><a href="exam.html#content">Exam</a></li>
+                        <li><a href="numberCalculator.html#content">Number Calculator</a></li>
+                        <li><a href="registration.html#content">Register</a></li>
+                        <li><a href="gallery.html#content">Gallery</a></li>
+                    </ul>
+                </nav>
+                <div id="content">
+                    <form action="index.html" method="post">
+                        <h2>Sign Up</h2>
+                        <fieldset>
+                            <legend><span class="number">1</span>Your basic info</legend>
+                            <label for="fname">Firstname:</label>
+                            <p id="fname-error" class="error">Invalid firstname!</p>
+                            <input type="text" id="fname" name="first_name" class="to-validate">
+
+                            <label for="sname">Secondname:</label>
+                            <p id="sname-error" class="error">Invalid secondname!</p>
+                            <input type="text" id="sname" class="to-validate" name="second_name">
+
+                            <label for="email">Email:</label>
+                            <p id="email-error" class="error">Invalid email!</p>
+                            <input type="email" id="email" name="user_email" class="to-validate">
+
+                            <label for="birthdate">Birthdate:</label>
+                            <p id="birthdate-error" class="error">Invalid date! Allowed formats DD/MM/(YY)YY or
+                                DD.MM.(YY)YY</p>
+                            <input type="text" id="birthdate" name="birthdate" class="to-validate">
+
+                            <label for="password">Password:</label>
+                            <p id="password-error" class="error">Invalid password!</p>
+                            <input type="password" id="password" name="password" class="to-validate">
+
+                            <label for="repeat-password">Repeat password:</label>
+                            <p id="repeat-password-error" class="error">Passwords do not match!</p>
+                            <input type="password" id="repeat-password" name="repeat_user_password">
+                        </fieldset>
+
+                        <fieldset>
+                            <legend><span class="number">2</span>Your profile</legend>
+                            <p id="interests-error" class="error">500 symbols max!</p>
+                            <label for="interests">Interests:</label>
+                            <textarea id="interests" class="to-validate" name="user_interests"></textarea>
+                        </fieldset>
+                        <fieldset>
+                            <label for="languages">Languages</label>
+                            <select id="languages" name="user_job" multiple>
+                                <optgroup label="Web">
+                                    <option value="frontend_developer">JavaScript Developer</option>
+                                    <option value="php_developor">PHP</option>
+                                    <option value="python_developer">Python</option>
+                                    <option value="rails_developer"> Rails</option>
+                                    <option value="WordPress_developer">WordPress</option>
+                                    <option value="java_developer">Java</option>
+                                </optgroup>
+                                <optgroup label="Mobile">
+                                    <option value="Android_developer">Java Android</option>
+                                    <option value="iOS_developer">Swift iOS</option>
+                                </optgroup>
+                                <optgroup label="Hardware">
+                                    <option value="c_developer">C</option>
+                                    <option value="cpp_developer">C++</option>
+                                    <option value="assembler_developer">Assembler</option>
+                                </optgroup>
+                                <optgroup label="Game Dev">
+                                    <option value="cs_unity_developer">Unity3d C#</option>
+                                    <option value="js_unity_developer">Unity Js</option>
+                                    <option value="cpp_unreal_engine_developer">Unreal Engine C++</option>
+                                </optgroup>
+                            </select>
+                            <label for="profile-pic">Profile picture:</label>
+                            <p id="profile-pic-error" class="error">Invalid format! Available: jpg, png or gif</p>
+                            <input type="file" id="profile-pic" class="to-validate" name="profile-pic">
+                        </fieldset>
+                        <p id="register-error" class="error">Fill in all fields and resolve all issues first!</p>
+                        <button type="button" class="register-button" id="register-button">Sign Up</button>
+                        <button type="button" class="register-button register-button-login" id="register-button-login">
+                            Sign In
+                        </button>
+                    </form>
+
+                    <div id="login-window" style="display: none;">
+                        <span id="cross-login-btn">x</span>
+                        <h2>Sing In</h2>
+                        <label for="email-login">Email:</label>
+                        <input type="email" name="email-login" id="email-login">
+                        <label for="password-login">Password:</label>
+                        <input type="password" name="password-login" id="password-login">
+                        <button id="button-login">Log In</button>
+                    </div>
+                </div>
+            </section>
+            <footer>
+                <h2>Made by Oleksii Ulianov, student of FeI-32</h2>
+            </footer>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="js/style-script.js"></script>
+<script type="module" src="js/dynamicMenu.mjs"></script>
+<script type="text/javascript" src="js/validators.js"></script>
+</body>
+</html>

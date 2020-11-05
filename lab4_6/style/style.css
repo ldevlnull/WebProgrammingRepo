@@ -8,7 +8,8 @@ nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0.5em;
-    width: 8em;
+    width: 10em;
+    /*width: 60%;*/
     border-right: 1px dotted grey;
     clear: both; /* clear space around (left and right side), this pushes other elements downward */
 }
@@ -17,6 +18,8 @@ div.content {
     margin: 0;
     padding: 0;
     clear: both;
+    width: 100%;
+    position: relative;
 }
 
 div.content div {
@@ -121,7 +124,8 @@ footer h2 {
 }
 
 .content.home {
-    text-align: center;
+    display: flex;
+    width: 100%;
 }
 
 .wrapper-parallax {
@@ -314,4 +318,86 @@ a {
     justify-content: space-between;
     text-align: center;
     margin: 10px;
+}
+
+.register-button, #button-login {
+    padding-top: 8px;
+}
+
+#login-window {
+    position: fixed;
+    top: 20%;
+    left: 37%;
+    background-color: #3978b8;
+    padding: 2.33%;
+    border: 3px solid #3978b8;
+    border-radius: 25px;
+}
+
+#login-window span {
+    position: relative;
+    left: 100%;
+    font-size: 28px;
+    cursor: default;
+}
+
+#login-window span:hover {
+    color: #b8b8b8;
+}
+
+#login-window span:active {
+    position: relative;
+    left: 100%;
+    font-size: 28px;
+    cursor: default;
+    color: #ff0000;
+}
+
+#sample-block {
+    height: 200px;
+    width: 200px;
+    background-color: darkblue;
+}
+
+#list-pictures > img {
+    margin: 30px;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    filter: grayscale(0%);
+    -webkit-filter: grayscale(0%);
+    -moz-filter: grayscale(0%);
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+}
+
+
+#list-pictures img:hover {
+    user-select: none;
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    cursor: pointer;
+}
+
+#next-pic-button, #prev-pic-button {
+    font-size: 100px;
+    border: 2px solid black;
+    border-radius: 100px;
+    cursor: pointer;
+    background-color: #8a90ba;
+    user-select: none;
+}
+
+#next-pic-button:hover, #prev-pic-button:hover {
+    background-color: gray;
+}
+
+#next-pic-button:active, #prev-pic-button:active {
+    background-color: #664c4c;
+}
+
+#picture-control {
+    text-align: center;
 }
