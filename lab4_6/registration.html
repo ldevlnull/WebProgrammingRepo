@@ -5,6 +5,7 @@
     <title>Registration</title>
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/registration.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
 <div id="scroll-animate">
@@ -23,6 +24,7 @@
                         <li><a href="numberCalculator.html#content">Number Calculator</a></li>
                         <li><a href="registration.html#content">Register</a></li>
                         <li><a href="gallery.html#content">Gallery</a></li>
+                        <li><a href="jqueryPreview.html#content">jQuery Preview</a></li>
                     </ul>
                 </nav>
                 <div id="content">
@@ -66,7 +68,7 @@
                             <label for="languages">Languages</label>
                             <select id="languages" name="user_job" multiple>
                                 <optgroup label="Web">
-                                    <option value="frontend_developer">JavaScript Developer</option>
+                                    <option value="frontend_developer">JavaScript</option>
                                     <option value="php_developor">PHP</option>
                                     <option value="python_developer">Python</option>
                                     <option value="rails_developer"> Rails</option>
@@ -94,19 +96,20 @@
                         </fieldset>
                         <p id="register-error" class="error">Fill in all fields and resolve all issues first!</p>
                         <button type="button" class="register-button" id="register-button">Sign Up</button>
-                        <button type="button" class="register-button register-button-login" id="register-button-login">
-                            Sign In
-                        </button>
+                        <button type="button" class="register-button register-button-login" id="register-button-login">Sign In</button>
                     </form>
 
                     <div id="login-window" style="display: none;">
                         <span id="cross-login-btn">x</span>
                         <h2>Sing In</h2>
-                        <label for="email-login">Email:</label>
-                        <input type="email" name="email-login" id="email-login">
-                        <label for="password-login">Password:</label>
-                        <input type="password" name="password-login" id="password-login">
-                        <button id="button-login">Log In</button>
+                        <p id="l-name">Name: </p>
+                        <p id="l-email">Email: </p>
+                        <p id="l-birthdate">Birthdate: </p>
+                        <p id="l-password">Password: </p>
+                        <p id="l-interests">Interests: </p>
+                        <p id="l-languages">Languages: </p>
+                        <p id="l-profile-picture">Profile picture: </p>
+                        <button id="button-login">Log In </button>
                     </div>
                 </div>
             </section>

@@ -332,6 +332,11 @@ a {
     padding: 2.33%;
     border: 3px solid #3978b8;
     border-radius: 25px;
+    width: 26%;
+}
+
+#login-window p{
+    color: white;
 }
 
 #login-window span {
@@ -353,11 +358,28 @@ a {
     color: #ff0000;
 }
 
-#sample-block {
-    height: 200px;
-    width: 200px;
+#sample-block1, #sample-block2, #sample-block3 {
+    margin: 20px;
+    height: 100px;
+    width: 100px;
+}
+
+#sample-block1 {
     background-color: darkblue;
 }
+
+#sample-block2 {
+    position: relative;
+    background-color: darkorange;
+}
+
+#sample-block3 {
+    background-image: url('https://i.imgur.com/zDuMDuW.jpg');
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 
 #list-pictures > img {
     margin: 30px;
