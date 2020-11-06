@@ -44,6 +44,14 @@ function trim(text) {
     return text.replaceAll(SPACE_REDUCE_REGEXP, ' ').trim();
 }
 
+function check30thDays(month, day) {
+    return [4, 6, 9, 11].includes(month) && day > 30;
+}
+
+function checkFebruary(month, day) {
+    return month === 2 && day > 28;
+}
+
 function validate(event) {
     const el = event.target;
     console.log('validating... ');
@@ -51,6 +59,22 @@ function validate(event) {
     const text = trim(el.value);
     console.log('text = ' + text)
     let isValid = REGEXP_BY_ID[el.id].test(text);
+
+    if (el.id === 'birthdate') {
+        const parsed = (el.value.includes('/')) ? el.value.split('\/') : el.value.split('\.');
+        console.log(parsed)
+        const day = parseInt(parsed[0]);
+        const month = parseInt(parsed[1]);
+        const year = parseInt(parsed[2]);
+
+        if (checkFebruary(month, day)) {
+            isValid = false;
+        }
+
+        if (check30thDays(month, day)) {
+            isValid = false;
+        }
+    }
 
     console.log('validated: ' + isValid);
     VALID[el.id] = isValid;
