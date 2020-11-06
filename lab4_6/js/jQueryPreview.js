@@ -64,6 +64,13 @@ $(document).ready(() => {
         $("td:last").css("color", "red");
     });
 
+    $.ui.autocomplete.filter = function (array, term) {
+        const matcher = new RegExp("^" + $.ui.autocomplete.escapeRegex(term), "i");
+        return $.grep(array, function (value) {
+            return matcher.test(value.label || value.value || value);
+        });
+    };
+
     $('#autofill').autocomplete({
         source: autofill_data
     });
