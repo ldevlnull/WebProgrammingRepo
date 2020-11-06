@@ -1,9 +1,9 @@
-const NAME_REGEXP = new RegExp('^(([A-Z])([a-z]+)?(\'?)([a-z]+))(([ -])([A-Za-z]+)?(\'?)([A-Za-z]+))*$')
+const NAME_REGEXP = new RegExp('^(([A-Z])([a-z]+)?(\'?)([a-z]+))(([ -])(([A-Za-z]+)?(\'?)([A-Za-z]+)){2,})*$')
 const SPACE_REDUCE_REGEXP = new RegExp(' {2,}', 'g')
-const EMAIL_REGEXP = new RegExp('^([A-Za-z])([A-Za-z._0-9]*)([A-Za-z0-9])(@)([a-z_0-9]+.){1,6}([a-z]{2,8})$')
+const EMAIL_REGEXP = new RegExp('^([A-Za-z])([A-Za-z._0-9]*)([A-Za-z0-9])(@)([a-z0-9\\-]+\\.){1,6}([a-z]{2,8})$')
 const PASSWORD_REGEXP = new RegExp('^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{6,}$')
 const DATE_REGEXP = new RegExp('^((?!00)([0-2][0-9])|3[0-1])(.|/)((?!00)(0[0-9])|(1[1-2]))(.|/)(((20[0-1]\\d)|(19[2-9]\\d))|(\\d{2}))$')
-const INTEREST_REGEXP = new RegExp('^\.{0,500}$')
+const INTEREST_REGEXP = new RegExp('^\.{1,500}$')
 const PROFILE_PIR_REGEXP = new RegExp('(\.gif|\.jpg|\.png)$')
 
 
@@ -57,8 +57,8 @@ function validate(event) {
     setErrorVisibility(el.id, !isValid);
 }
 
-function checkIfPasswordMatch() {
-    const repeatId = "repeat-password";
+function checkIfPasswordMatch(ev) {
+    const repeatId = ev.target.id;
     const password = trim(document.getElementById('password').value);
     const repeatPassword = trim(document.getElementById(repeatId).value);
 
@@ -106,6 +106,6 @@ document.getElementById('cross-login-btn').addEventListener('click', ev =>
     document.getElementById('login-window').style.display = 'none')
 
 document.querySelectorAll('.to-validate').forEach(el => el.addEventListener('change', ev => validate(ev)))
-document.getElementById('repeat-password').addEventListener('change', checkIfPasswordMatch)
+    document.getElementById('repeat-password').addEventListener('change', ev => checkIfPasswordMatch(ev))
 
 document.getElementById('register-button').addEventListener('click', handleRegister)
