@@ -2,8 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Gallery</title>
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/registration.css">
+    <title>aJax Preview</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
 </head>
 <body>
 <div id="scroll-animate">
@@ -13,7 +17,7 @@
                 <h1>Header</h1>
             </header>
             <div id="dynamic-menu"></div>
-            <section class="content home" style="height: 1200px">
+            <section class="content home">
                 <nav>
                     <ul>
                         <li><a href="index.html#content">Home page</a>
@@ -28,13 +32,18 @@
                 </nav>
                 <div class="content" id="content">
                     <div id="page">
-                        <h2>Gallery</h2>
-                        <div id="main-picture"></div>
-                        <div id="picture-control">
-                            <span id="prev-pic-button"><</span>
-                            <span id="next-pic-button">></span>
+                        <h2>aJax Preview</h2>
+                        <div style="text-align: center">
+                            <button style="width: 200px; height: 60px;" id="xml-btn">Load XML</button>
                         </div>
-                        <div id="list-pictures"></div>
+                        <div style="text-align: center">
+                            <form>
+                                <input type="text" value="" id="username"/> <br/>
+                                <input type="text" value="" id="userage"/> <br/>
+                            </form>
+                            <button style="width: 200px; height: 60px;" value="User1" onclick="f(0)">User1</button>
+                            <button style="width: 200px; height: 60px;" value="User2" onclick="f(1)">User2</button>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -44,8 +53,9 @@
         </div>
     </div>
 </div>
+<script type="text/javascript" src="js/ajaxPreview.js"></script>
 <script type="text/javascript" src="js/style-script.js"></script>
 <script type="module" src="js/dynamicMenu.js"></script>
-<script type="text/javascript" src="js/galleryScript.js"></script>
 </body>
+
 </html>
