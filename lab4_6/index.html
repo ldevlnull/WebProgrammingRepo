@@ -32,8 +32,10 @@
                     <div id="page">
                         <h2>Home page</h2>
                         <p>Just blank page with references to another pages</p>
-                        <div><a id="lviv-btn" href="http://localhost:8080/App/lviv-info.txt">Lviv</a></div>
-                        <div><a id="lnu-btn" href="http://localhost:8080/App/lnu-info.txt">LNU</a></div>
+                        <div><a onclick="loadTxt('lviv-info')" id="lviv-btn"> <!--href="http://localhost:8080/App/lviv-info.txt"-->Lviv</a></div>
+                        <div><a onclick="loadTxt('lnu-info')" id="lnu-btn"> <!--href="http://localhost:8080/App/lnu-info.txt"-->LNU</a></div>
+                        <br>
+                        <div id="load-text"></div>
                     </div>
                 </div>
             </section>
@@ -44,6 +46,7 @@
     </div>
 </div>
 <script type="text/javascript" src="js/style-script.js"></script>
+<script type="text/javascript" src="js/ajaxPreview.js"></script>
 <script type="module" src="js/dynamicMenu.js"></script>
 </body>
 </html>
